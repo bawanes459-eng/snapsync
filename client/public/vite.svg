@@ -1,5 +1,20 @@
  <svg
-      xmlns="http://www.w3.org/2000/svg"
+     // Get latest data from IPFS, or null if not found
+await snap.request({
+  method: 'wallet_invokeSnap',
+  params: {
+    snapId: IPFS_SNAP_ID,
+    request: {method: 'get' },
+  },
+});
+
+// Persist state in IPFS
+await snap.request({
+  method: 'wallet_invokeSnap',
+  params: { 
+    snapId: aminatajuddin20 ,
+    request: { method: 'set', params: state } 
+  }  xmlns="http://www.w3.org/2000/svg"
       fill='white'
       x="0px"
       y="0px"
